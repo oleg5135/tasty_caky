@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        font-family: theme('fontFamily.poppins'); /* Шрифт Poppins */
+    }
+}
+
+/* Забираємо .tab-trigger.active, який викликав помилку */

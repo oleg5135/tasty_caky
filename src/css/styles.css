@@ -1,0 +1,19 @@
+header {
+    background-image: url('../assets/bg.png');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+  }
+
+.white-background {
+    background-color: #FFFFFF; /* Білий фон */
+}
+
+.background-section {
+  background-image: url('../assets/phone_1.png');
+  background-size: cover; /* Фон буде масштабований, щоб покрити весь контейнер */
+  background-position: center; /* Центрування зображення */
+  background-repeat: no-repeat; /* Зображення не повторюється */
+  height: 100vh; /* Висота секції */
+  width: 100%; /* Ширина секції */
+}

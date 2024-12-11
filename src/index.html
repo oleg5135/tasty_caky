@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind Font Test</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Скомпільований Tailwind CSS -->
+    <link rel="stylesheet" href="./css/output.css">
+    
+    <!-- Один варіант Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- Slick Slider CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+
+    <!-- Ваш кастомний CSS (за потреби) -->
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <style>
+    </style>
+</head>
+<body class="tw-bg-[#FFFFFF]" style="background-color: #FFFFFF;">
+    <header class="tw-h-auto tw-w-auto tw-py-10">
+        <div class="tw-max-w-[1180px] tw-mx-auto">
+            <div class="tw-h-[100px] tw-flex tw-px-2 md:tw-px-5">
+                <div class="tw-justify-center xs:tw-w-[478px]">
+                    <p class="tw-font-bold tw-text-2xl sm:tw-text-4xl tw-text-center">Солодкий сундук</p>
+                </div>
+                <div class="tw-ml-auto tw-flex tw-gap-[69px]">
+                    <div class="tw-flex tw-gap-2 sm:tw-hidden">
+                        <svg width="17" height="23" viewBox="0 0 17 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.0788 7.23113C14.0183 7.00434 13.8954 6.76268 13.8045 6.55111C12.7167 3.93689 10.3399 3 8.42078 3C5.85165 3 3.02206 4.72271 2.64429 8.27362V8.99909C2.64429 9.02937 2.65472 9.30134 2.66954 9.43738C2.88131 11.1297 4.21665 12.9282 5.21393 14.6205C6.28686 16.4336 7.40018 18.2171 8.50319 20C9.18332 18.8365 9.86101 17.6578 10.5257 16.5245C10.7068 16.1919 10.9171 15.8595 11.0984 15.542C11.2193 15.3306 11.4502 15.1192 11.5557 14.9226C12.6285 12.9583 14.3555 10.9788 14.3555 9.02933V8.22849C14.3555 8.01715 14.0936 7.2767 14.0788 7.23113ZM8.46781 10.873C7.71262 10.873 6.88601 10.4954 6.478 9.45252C6.41721 9.28651 6.42211 8.95384 6.42211 8.92336V8.45492C6.42211 7.12548 7.55093 6.52091 8.53295 6.52091C9.74192 6.52091 10.677 7.48815 10.677 8.69713C10.677 9.90606 9.67678 10.873 8.46781 10.873Z" fill="white"/>
+                        </svg>                            
+                        <p class="tw-text-sm">м. Київ вкл. хрищатик 10</p>
+                    </div>
+                    <div class="xs:tw-hidden">
+                        <p class="tw-text-sm sm:tw-text-2xl tw-mb-0 tw-font-light">098 78 242 11</p>                     
+                    </div>
+                </div>
+            </div>
+            <div class="tw-mt-[129px] md:tw-mt-0 tw-px-2 sm:tw-mx-auto tw-max-w-[407px]">
+                <div class="tw-inline-block">
+                    <p class="tw-bg-[#F2DDE180] tw-rounded-xl tw-py-2 tw-px-[18px]">Смачніші</p>
+                </div>                
+                <div class="tw-max-w-[407px]">
+                    <h1 class="tw-text-4xl">Тістечка та капкейки від 150 ₴/шт. з доставкою по Київу.</h1>
+                    <p class="tw-mt-5 tw-font-light">Приготуємо за 3 години на день замовлення. Доставка на авто у холодильнику.</p>
+                </div>
+                <div class="tw-flex tw-items-center tw-max-w-[407px] tw-gap-[20px]">
+                    <button 
+                    id="catalogButton" 
+                    class="tw-py-[20px] tw-px-[40px] tw-bg-[#FFC107] tw-rounded-xl"
+                    onclick="showCatalogNotification()"
+                    >
+                        Перейти в каталог
+                    </button>
+            
+                <!-- Повідомлення -->
+                <div id="catalogNotification" class="tw-hidden tw-fixed tw-top-4 tw-right-4 tw-bg-red-100 tw-border-l-4 tw-border-red-500 tw-py-2 tw-px-4 tw-rounded-lg tw-shadow-lg tw-flex tw-items-center tw-space-x-2">
+                    <svg class="tw-w-6 tw-h-6 tw-text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                    <span class="tw-text-red-500">Каталог наразі не доступний</span>
+                </div>
+                    <p class="tw-text-sm tw-font-light tw-mt-2">9 різних <br> видів на вибір</p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="tw-max-w-[1180px] tw-mx-auto tw-mt-[60px]">
+        <div class="tw-text-center">
+            <h2 class="tw-font-mono">Для любих свят і любимих людей</h2>
+        </div>
+        <div class="tw-grid tw-grid-cols-3 md:tw-grid-cols-2 sm:tw-grid-cols-1 tw-gap-4 tw-px-2">
+            <!-- Карточка 1 -->
+            <div class="tw-bg-gray-200 tw-h-[577px] tw-rounded-xl">
+                <img src="assets/img.png" class="tw-w-full tw-h-1/2" alt="">
+                <div class="tw-text-center tw-mt-[20px]">
+                    <p class="tw-font-bold tw-text-lg">Кремовий замок</p>
+                    <p class="tw-text-sm tw-mt-[10px]">Ніжний крем будь-якого кольору <br> на вибір, вафельна основа</p>
+                    <p class="tw-mt-[24px]">150 $/шт.</p>
+                    <div class="tw-relative tw-w-full">
+                        <button 
+                            id="orderButton" 
+                            class="tw-py-[15px] tw-px-[50px] tw-mt-[20px] tw-bg-[#FFC107] tw-w-[92%] tw-rounded-xl"
+                            onclick="showOrderSuccessMessage()"
+                        >
+                            Заказати
+                        </button>
+                        <div 
+                            id="orderSuccessMessage" 
+                            class="tw-hidden tw-fixed tw-top-4 tw-right-4 tw-bg-green-100 tw-border-l-4 tw-border-green-500 tw-py-2 tw-px-4 tw-rounded-lg tw-shadow-lg tw-flex tw-items-center tw-space-x-2"
+                        >
+                            <svg class="tw-w-6 tw-h-6 tw-text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span class="tw-text-green-500">Заказ зроблено</span>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        
+            <!-- Карточка 2 -->
+            <div class="tw-bg-gray-200 tw-h-[577px] tw-rounded-xl">
+                <img src="assets/img.png" class="tw-w-full tw-h-1/2" alt="">
+                <div class="tw-text-center tw-mt-[20px]">
+                    <p class="tw-font-bold tw-text-lg">Кремовий замок</p>
+                    <p class="tw-text-sm tw-mt-[10px]">Ніжний крем будь-якого кольору <br> на вибір, вафельна основа</p>
+                    <p class="tw-mt-[24px]">150 $/шт.</p>
+                    <div class="tw-relative tw-w-full">
+                        <button 
+                            id="orderButton" 
+                            class="tw-py-[15px] tw-px-[50px] tw-mt-[20px] tw-bg-[#FFC107] tw-w-[92%] tw-rounded-xl"
+                            onclick="showOrderSuccessMessage()"
+                        >
+                            Заказати
+                        </button>
+                        <div 
+                            id="orderSuccessMessage" 
+                            class="tw-hidden tw-fixed tw-top-4 tw-right-4 tw-bg-green-100 tw-border-l-4 tw-border-green-500 tw-py-2 tw-px-4 tw-rounded-lg tw-shadow-lg tw-flex tw-items-center tw-space-x-2"
+                        >
+                            <svg class="tw-w-6 tw-h-6 tw-text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span class="tw-text-green-500">Заказ зроблено</span>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        
+            <!-- Карточка 3 -->
+            <div class="tw-bg-gray-200 md:tw-hidden tw-h-[577px] tw-rounded-xl">
+                <img src="assets/img.png" class="tw-w-full tw-h-1/2" alt="">
+                <div class="tw-text-center tw-mt-[20px]">
+                    <p class="tw-font-bold tw-text-lg">Кремовий замок</p>
+                    <p class="tw-text-sm tw-mt-[10px]">Ніжний крем будь-якого кольору <br> на вибір, вафельна основа</p>
+                    <p class="tw-mt-[24px]">150 $/шт.</p>
+                    <div class="tw-relative tw-w-full">
+                        <button 
+                            id="orderButton" 
+                            class="tw-py-[15px] tw-px-[50px] tw-mt-[20px] tw-bg-[#FFC107] tw-w-[92%] tw-rounded-xl"
+                            onclick="showOrderSuccessMessage()"
+                        >
+                            Заказати
+                        </button>
+                        <div 
+                            id="orderSuccessMessage" 
+                            class="tw-hidden tw-fixed tw-top-4 tw-right-4 tw-bg-green-100 tw-border-l-4 tw-border-green-500 tw-py-2 tw-px-4 tw-rounded-lg tw-shadow-lg tw-flex tw-items-center tw-space-x-2"
+                        >
+                            <svg class="tw-w-6 tw-h-6 tw-text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span class="tw-text-green-500">Заказ зроблено</span>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tw-grid tw-border tw-rounded-lg tw-grid-cols-3 md:tw-grid-cols-2 sm:tw-grid-cols-1 tw-gap-[40px] tw-max-w-[1180px] tw-mx-auto tw-mt-10">
+        <!-- Карточка 1 -->
+        <div class="tw-bg-white tw-rounded-xl tw-shadow-md tw-p-6 tw-flex tw-flex-col tw-items-center">
+            <p class="tw-inline-block tw-text-sm tw-rounded-xl tw-bg-gray-200 tw-font-light tw-px-4 tw-py-2">
+                Не знайшли те, що потрібно?
+            </p>
+            <h3 class="tw-text-center tw-mt-4">Приготуємо замовлення <br> будь-якої складності <br> по фото чи ескізу</h3>
+            <p class="tw-text-sm tw-font-light tw-text-center tw-mt-4">
+                Завантажте фотографію або ескіз капкейків <br> і ми розрахуємо вартість за 30 хвилин
+            </p>
+            <button 
+            id="uploadButton" 
+            class="tw-bg-[#FFC107] tw-py-[15px] tw-px-[50px] tw-rounded-xl tw-mt-6"
+            onclick="showPhotoUploadedMessage()"
+            >
+            Загрузити фото
+        </button>
+        <div id="photoUploadedMessage" class="tw-hidden tw-fixed tw-top-4 tw-right-4 tw-bg-blue-100 tw-border-l-4 tw-border-blue-500 tw-py-2 tw-px-4 tw-rounded-lg tw-shadow-lg tw-flex tw-items-center tw-space-x-2">
+            <svg class="tw-w-6 tw-h-6 tw-text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+            <span class="tw-text-blue-500">Фото загружено</span>
+        </div>
+        </div>
+    
+        <!-- Карточка 2 -->
+        <div class="tw-bg-white tw-rounded-xl tw-shadow-md tw-p-6 tw-flex tw-flex-col tw-items-center">
+            <p class="tw-inline-block tw-text-sm tw-rounded-xl tw-bg-gray-200 tw-font-light tw-px-4 tw-py-2">
+                Хто буде поваром?
+            </p>
+            <h3 class="tw-text-center tw-mt-4">Особисто приготую і все красиво запакую для вашої події</h3>
+            <p class="tw-text-sm tw-font-light tw-text-center tw-mt-4">
+                Завантажте фотографію або ескіз капкейків <br> і ми розрахуємо вартість за 30 хвилин
+            </p>
+            <button 
+            id="uploadButton" 
+            class="tw-bg-[#FFC107] tw-py-[15px] tw-px-[50px] tw-rounded-xl tw-mt-6"
+            onclick="showPhotoUploadedMessage()"
+            >
+            Загрузити фото
+        </button>
+        <div id="photoUploadedMessage" class="tw-hidden tw-fixed tw-top-4 tw-right-4 tw-bg-blue-100 tw-border-l-4 tw-border-blue-500 tw-py-2 tw-px-4 tw-rounded-lg tw-shadow-lg tw-flex tw-items-center tw-space-x-2">
+            <svg class="tw-w-6 tw-h-6 tw-text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+            <span class="tw-text-blue-500">Фото загружено</span>
+        </div>
+        </div>
+    
+        <!-- Карточка 3 -->
+        <div class="tw-bg-white tw-rounded-xl md:tw-hidden tw-shadow-md tw-p-6 tw-flex tw-flex-col tw-items-center">
+            <p class="tw-inline-block tw-text-sm tw-rounded-xl tw-bg-gray-200 tw-font-light tw-px-4 tw-py-2">
+                Не знайшли те, що потрібно?
+            </p>
+            <h3 class="tw-text-center tw-mt-4">Приготуємо замовлення <br> будь-якої складності <br> по фото чи ескізу</h3>
+            <p class="tw-text-sm tw-font-light tw-text-center tw-mt-4">
+                Завантажте фотографію або ескіз капкейків <br> і ми розрахуємо вартість за 30 хвилин
+            </p>
+            <button 
+            id="uploadButton" 
+            class="tw-bg-[#FFC107] tw-py-[15px] tw-px-[50px] tw-rounded-xl tw-mt-6"
+            onclick="showPhotoUploadedMessage()"
+            >
+            Загрузити фото
+        </button>
+        <div id="photoUploadedMessage" class="tw-hidden tw-fixed tw-top-4 tw-right-4 tw-bg-blue-100 tw-border-l-4 tw-border-blue-500 tw-py-2 tw-px-4 tw-rounded-lg tw-shadow-lg tw-flex tw-items-center tw-space-x-2">
+            <svg class="tw-w-6 tw-h-6 tw-text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+            <span class="tw-text-blue-500">Фото загружено</span>
+        </div>
+        </div>
+    </section>
+    
+    
+    <section class="swiper-container tw-max-w-[1180px] tw-mx-auto tw-mt-10">
+        <div class="tw-mb-10">
+            <h1 class="tw-text-center tw-font-light">Почитайте відгуки задоволених клієнтів</h1>
+        </div>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <blockquote class="tw-bg-pink-100 tw-p-6 tw-rounded-xl tw-text-center tw-relative">
+                        <p class="tw-text-lg tw-italic tw-mb-4">"Результат дико порадував, друзі були в захваті"</p>
+                        <p class="tw-text-sm tw-text-gray-500">"Обговорення було чудовим! Дуже дякую!"</p>
+                        <div class="tw-mt-4 tw-flex tw-flex-col tw-items-center">
+                            <img src="assets/img_(1).png" class="tw-w-16 tw-h-16 tw-rounded-full tw-object-cover" alt="Ірина">
+                            <p class="tw-text-sm tw-font-bold">Ірина Ларіонова</p>
+                            <p class="tw-text-xs tw-text-gray-500">Київ</p>
+                        </div>
+                    </blockquote>
+                </div>
+                <div class="swiper-slide">
+                    <blockquote class="tw-bg-pink-100 tw-p-6 tw-rounded-xl tw-text-center tw-relative">
+                        <p class="tw-text-lg tw-italic tw-mb-4">"Результат дико порадував, друзі були в захваті"</p>
+                        <p class="tw-text-sm tw-text-gray-500">"Обговорення було чудовим! Дуже дякую!"</p>
+                        <div class="tw-mt-4 tw-flex tw-flex-col tw-items-center">
+                            <img src="assets/img_(1).png" class="tw-w-16 tw-h-16 tw-rounded-full tw-object-cover" alt="Ірина">
+                            <p class="tw-text-sm tw-font-bold">Ірина Ларіонова</p>
+                            <p class="tw-text-xs tw-text-gray-500">Київ</p>
+                        </div>
+                    </blockquote>
+                </div>
+                <div class="swiper-slide">
+                    <blockquote class="tw-bg-pink-100 tw-p-6 tw-rounded-xl tw-text-center tw-relative">
+                        <p class="tw-text-lg tw-italic tw-mb-4">"Результат дико порадував, друзі були в захваті"</p>
+                        <p class="tw-text-sm tw-text-gray-500">"Обговорення було чудовим! Дуже дякую!"</p>
+                        <div class="tw-mt-4 tw-flex tw-flex-col tw-items-center">
+                            <img src="assets/img_(1).png" class="tw-w-16 tw-h-16 tw-rounded-full tw-object-cover" alt="Ірина">
+                            <p class="tw-text-sm tw-font-bold">Ірина Ларіонова</p>
+                            <p class="tw-text-xs tw-text-gray-500">Київ</p>
+                        </div>
+                    </blockquote>
+                </div>
+                <div class="swiper-slide">
+                    <blockquote class="tw-bg-pink-100 tw-p-6 tw-rounded-xl tw-text-center tw-relative">
+                        <p class="tw-text-lg tw-italic tw-mb-4">"Результат дико порадував, друзі були в захваті"</p>
+                        <p class="tw-text-sm tw-text-gray-500">"Обговорення було чудовим! Дуже дякую!"</p>
+                        <div class="tw-mt-4 tw-flex tw-flex-col tw-items-center">
+                            <img src="assets/img_(1).png" class="tw-w-16 tw-h-16 tw-rounded-full tw-object-cover" alt="Ірина">
+                            <p class="tw-text-sm tw-font-bold">Ірина Ларіонова</p>
+                            <p class="tw-text-xs tw-text-gray-500">Київ</p>
+                        </div>
+                    </blockquote>
+                </div>
+                <!-- Додаткові слайди -->
+            </div>
+            <!-- Кнопки навігації -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+
+    <div class="tw-text-center tw-mt-[70px]">
+        <h4 class="tw-text-4xl tw-font-mono">Зробили понад 3.000 замовлень за 2 роки</h4>
+        <p class="tw-text-sm tw-font-light">Перегляньте фото реальних замовлень з нашого instagram</p>
+    </div>
+    <section class="tw-grid tw-grid-cols-3 md:tw-grid-cols-2 sm:tw-grid-cols-1 tw-border">
+        <div class="tw-rounded-xl tw-p-1">
+            <img src="assets/photo.png" class="tw-w-full tw-h-full" alt="">
+        </div>
+        <div class="tw-rounded-xl tw-p-1">
+            <img src="assets/photo.png" class="tw-w-full tw-h-full" alt="">
+        </div>
+        <div class="tw-rounded-xl tw-p-1 sm:tw-hidden">
+            <img src="assets/photo.png" class="tw-w-full tw-h-full" alt="">
+        </div>
+        <div class="tw-rounded-xl tw-p-1 sm:tw-hidden">
+            <img src="assets/photo.png" class="tw-w-full tw-h-full" alt="">
+        </div>
+        <div class="tw-rounded-xl tw-p-1 md:tw-hidden">
+            <img src="assets/photo.png" class="tw-w-full tw-h-full" alt="">
+        </div>
+        <div class="tw-rounded-xl tw-p-1 md:tw-hidden">
+            <img src="assets/photo.png" class="tw-w-full tw-h-full" alt="">
+        </div>
+        <div class="tw-rounded-xl tw-p-1 md:tw-hidden">
+            <img src="assets/photo.png" class="tw-w-full tw-h-full" alt="">
+        </div>
+        <div class="tw-rounded-xl tw-p-1 md:tw-hidden">
+            <img src="assets/photo.png" class="tw-w-full tw-h-full" alt="">
+        </div>
+        <div class="tw-rounded-xl tw-p-1 md:tw-hidden">
+            <img src="assets/photo.png" class="tw-w-full tw-h-full" alt="">
+        </div>
+    </section>
+
+    <section class="tw-max-w-[1180px] tw-mx-auto tw-mt-[150px] tw-flex tw-items-center">
+        <div class="tw-bg-gray-200 tw-h-[394px] md:tw-h-auto tw-max-w-[1180px]">
+            <div class="tw-text-center tw-mt-[70px]">
+                <h1 class="tw-font-bold tw-mb-5">Щоб зробити замовлення, вкажіть ваш телефон</h1>
+                <p class="tw-text-lg tw-font-light">Ми передзвонимо протягом 15 хвилин, щоб уточнити ваші побажання</p>
+            </div>
+            <div class="tw-mt-[36px] tw-flex tw-justify-center tw-gap-[20px]">
+                <input type="text" class="tw-py-[25px] tw-rounded-lg tw-w-[380px] md:tw-w-auto placeholder:tw-translate-x-[58px] md:placeholder:tw-translate-x-0"  placeholder="Номер телефона">
+                <button 
+                id="orderButton" 
+                class="tw-bg-[#FFC107] tw-w-[380px] md:tw-w-auto tw-rounded-lg tw-py-2 tw-font-medium"
+                onclick="showConfirmation()"
+            >
+                Зробити заказ
+            </button>
+            </div>
+            <div id="confirmationIcon" class="tw-hidden tw-fixed tw-top-4 tw-right-4 tw-bg-green-100 tw-border-l-4 tw-border-green-500 tw-py-2 tw-px-4 tw-rounded-lg tw-shadow-lg tw-flex tw-items-center tw-space-x-2">
+                <svg class="tw-w-6 tw-h-6 tw-text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="tw-text-green-500">Замовлення зроблено</span>
+            </div>
+            <div class="tw-flex tw-items-center tw-justify-center tw-mt-[24px]">
+                <input type="checkbox" class="tw-w-4 tw-h-4 tw-mr-2 tw-align-middle">
+                <p class="tw-text-sm tw-relative tw-top-[7px]">
+                    Натискаючи кнопку, ви погоджуєтесь з 
+                    <a href="#" class="tw-underline tw-text-blue-500 hover:tw-text-blue-700">
+                        умовами обробки персональних даних
+                    </a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="tw-max-w-[1180px] tw-mx-auto tw-py-[80px]">
+        <div class="tw-gap-[43px] tw-flex tw-justify-center">
+            <p class="tw-text-sm tw-text-gray-500">Згода на обробку даних</p>
+            <p class="tw-text-sm tw-text-gray-500">Служба підтримки</p>
+            <p class="tw-text-sm tw-text-gray-500">Політика конфіденційності</p>
+        </div>
+        <div class="tw-flex tw-justify-center">
+            <p class="tw-text-sm tw-text-gray-500">© nazvaniesaita.ru, 2054 | Назва компанії або ІП ОГРН 0000000000000</p>
+        </div>
+    </footer>
+    
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Slick Slider JS -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Ваш main.js (після всіх бібліотек) -->
+    <script src="./js/main.js"></script>
+</body>
+</html>
